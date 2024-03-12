@@ -1,0 +1,26 @@
+<!-- In your_app/templates/test_database.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Database</title>
+</head>
+<body>
+    <h1>User Data</h1>
+    <ul>
+        {% for user in data_from_db %}
+            <li>
+                <strong>{{ user.FirstName }} {{ user.LastName }}</strong> ({{ user.UserRole }})
+                <br>
+                Email: {{ user.Email }}
+                <br>
+                Registration Date: {{ user.RegistrationDate }}
+                <br>
+                Address: {{ user.Address }}
+                <br>
+                Phone Number: {{ user.PhoneNumber }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
